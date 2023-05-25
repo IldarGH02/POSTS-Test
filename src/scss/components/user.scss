@@ -1,0 +1,50 @@
+.user__card {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 30px;
+    margin-bottom: 30px;
+    outline: 1px solid $borderColor;
+    border-radius: 3px;
+
+    .user__card-content {       
+
+        .user__information {
+            .user__data {
+                @include _fontStyle(400, 25px, 30px, $darkColor);
+    
+                span {
+                    @include _fontStyle(400, 22px, 25px, $borderColor)
+                }
+            }
+        }
+    
+        .user__address {
+            .user__data {
+                @include _fontStyle(400, 25px, 30px, $darkColor);
+    
+                span {
+                    @include _fontStyle(400, 22px, 25px, $borderColor)
+                }
+            }
+        }
+    
+        .user__job {
+            .user__data {
+                @include _fontStyle(400, 25px, 30px, $darkColor);
+    
+                span {
+                    @include _fontStyle(400, 22px, 25px, $borderColor)
+                }
+            }
+        }        
+    }   
+    .user__photo {
+        .user__avatar {
+            max-width: 300px;
+            max-height: 300px;
+            border-radius: 5px;
+        }
+    }
+}

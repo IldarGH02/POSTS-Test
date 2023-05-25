@@ -1,0 +1,41 @@
+.header {
+    background-color: $grayColor;
+
+    .header__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0;
+
+        .header__title {
+            a {
+                text-decoration: none;
+                @include _fontStyle(600, 30px, 35px, $whiteColor);
+            }
+        }
+
+        .header__nav {
+            .header__link {
+                padding: 0;
+                text-decoration: none;
+                transition: color .3s ease-in-out;
+
+                &:not(:last-child) {
+                    margin-right: 35px;
+                }
+
+                &:hover {
+                    color: $hoverColor; 
+                }
+
+                @include _fontStyle(400, 25px, 30px, $whiteColor);
+            }
+            
+            .active {
+                color: $hoverColor;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.comments__item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $borderColor;
+
+    .modal__user-information {
+        .modal__user-email {
+            @include _fontStyle(400, 20px, 25px, $blueColor)
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.user__post {
+    max-width: 600px;
+    height: 250px;
+
+    .user__post-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 20px 30px;
+        gap: 20px;
+        outline: 1px solid $borderColor;
+        box-shadow: 0px 5px 11px 5px rgba(34, 60, 80, 0.2);
+        border-radius: 3px;
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+        }
+
+        .user__post-title {
+            @include _fontStyle(400, 25px, 30px, $titleBlueColor)
+        }
+
+        .user__post-text {
+            margin: 0;
+            @include _fontStyle(400, 20px, 25px, $darkColor)
+        }
+    }
+}

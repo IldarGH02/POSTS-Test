@@ -1,0 +1,1 @@
+export const routeMain = (id = ':id') => `/user/${id}`

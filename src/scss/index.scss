@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+@import './common/common.scss';
+@import './ui/ui.scss';
+@import './components/components.scss';
+@import './pages/pages.scss';
+
+body {
+    font-family: 'EB Garamond', serif;
+    max-height: 100vh;
+    overflow-x: hidden;
+    min-width: 320px;
+    margin: 0;
+}
