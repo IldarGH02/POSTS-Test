@@ -35,7 +35,6 @@ const PostItem = ({item, text, count, handleClick, users}) => {
                     </Card.Body>
                     <div className="post__card-actions">
                         <ButtonUi className="posts__button" onClick={handleClick} description={text}/>
-                        <span>{count}</span>
                     </div>
                 </div>                
             </Card> : <></>}

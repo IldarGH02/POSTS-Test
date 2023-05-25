@@ -6,6 +6,10 @@
         max-width: 100%;
     }
 
+    @media (max-width: 768px) {
+        height: 100%;
+    }
+
     .post__card {
         display: flex;
         flex-direction: row;
