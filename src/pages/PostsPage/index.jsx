@@ -22,7 +22,7 @@ const PostsPage = () => {
         if(!searchValue) return posts
 
         return posts.filter((post) => post.title.includes(searchValue))
-    })       
+    })
 
     useEffect(() => {
         setTimeout(() => {
@@ -46,7 +46,8 @@ const PostsPage = () => {
         setValue(target)
     }
 
-    const handleClean = () => {
+    
+    const handleClear = () => {
         setValue('')
     }
 
@@ -59,9 +60,9 @@ const PostsPage = () => {
                         title='Список постов'
                     />
                     <SearchPost
-                        handleChange={(e) => handleChange(e)}
+                        handleChange={handleChange}
+                        handleClick={handleClear}
                         value={value}
-                        handleClick={handleClean}
                     />
                     <PostsList 
                         list={postsList.slice(0, users.length)} 
