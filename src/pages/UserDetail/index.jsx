@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { routeMain } from "./routes"
+
+import { routeMain as routePostsPage } from "pages/PostsPage"
+
 import User from "components/User"
 import PageTitle from "components/PageTitle"
 import { fetchInitialUserPosts } from "store/userPosts/actions"
 import UserPosts from "components/UserPosts"
 import Loader from "ui/Loader"
+import ButtonUi from "ui/Button"
 
 const UserDetail = () => {
     const {id} = useParams()
@@ -37,7 +41,13 @@ const UserDetail = () => {
         <section className="user">
             <div className="container">
                 <div className="user__content">
-                    <PageTitle class='user__title' title={`Пользователь: ${user?.username}`}/>
+                    <div className="user__top">
+                        <PageTitle class='user__title' title={`Пользователь: ${user?.username}`}/>
+                        <ButtonUi
+                            description={<Link className="user__button-back" to={routePostsPage()}>Назад</Link>}
+                            className="user__button"
+                        />
+                    </div>
                         {user ? <User
                         name={user.name}
                         email={user.email}

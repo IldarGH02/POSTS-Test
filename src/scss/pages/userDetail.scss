@@ -1,10 +1,32 @@
 .user__content {
     padding: 50px 0;
 
-    .user__title {
+    .user__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 30px;
-    }
 
+        .user__button {
+            background-color: transparent;
+            transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+            &:hover {
+                background-color: #0d6efd;                
+            }
+
+            &:hover > .user__button-back {
+                color: #fff;                
+            }
+
+            .user__button-back {
+                text-decoration: none;
+                @include _fontStyle(400, 17px, 21px, $darkColor)
+            }
+        }
+    
+    }
     .user__posts-title {
         margin-bottom: 30px;
     }

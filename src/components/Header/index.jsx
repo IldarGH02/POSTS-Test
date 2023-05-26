@@ -3,17 +3,28 @@ import { routeMain as routePostsPage } from "pages/PostsPage"
 import { routeMain as routeAboutPage } from "pages/AboutPage"
 import { Nav } from "react-bootstrap"
 import ButtonUi from "ui/Button"
+import { useEffect} from "react"
 
 const Header = () => {
-    const handleClick = () => {
-       const nav = document.querySelector('.header__nav')
-       nav.classList.add('--isOpen')
-    }
+    useEffect(() => {
+        const nav = document?.querySelector('.header__nav')
+        const button = document.querySelector('.header__burger') 
+
+        const onClick = (e) => {
+            if(e.target === button) {
+                nav.classList.add('--isOpen')
+            } else {
+                nav.classList.remove('--isOpen')
+            }
+        }
+
+        return document.addEventListener('click', (onClick))
+    }, [])
 
     const handleClose = () => {
-        const nav = document.querySelector('.header__nav')
+        const nav = document?.querySelector('.header__nav')
         nav.classList.remove('--isOpen')
-    }
+    }     
 
     return (
         <header className="header">
@@ -28,7 +39,7 @@ const Header = () => {
                         <ButtonUi className="header__button-close" onClick={handleClose} description='Закрыть'/>
                     </Nav>
                     <div className="header__burger-container">
-                        <ButtonUi className='header__burger' onClick={handleClick} description={<span></span>}/>
+                        <ButtonUi className='header__burger' description={<span></span>}/>
                     </div>
                 </div>
             </div>
