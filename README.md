@@ -1,6 +1,6 @@
 ##  Posts App - app using the React, Redux, Bootstrap, rest api, sass
 
-See here - https://posts-phi-plum.vercel.app/
+See here - posts-phi-plum.vercel.app
 
 ### Getting Started
 
