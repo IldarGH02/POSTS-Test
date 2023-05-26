@@ -19,6 +19,7 @@
             .header__link {
                 padding: 0;
                 text-decoration: none;
+                white-space: nowrap;
                 transition: color .3s ease-in-out;
 
                 &:not(:last-child) {
